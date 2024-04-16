@@ -53,7 +53,7 @@ def main():
   # Get Parameters.
   build_date = utils.GetMetadataAttribute(
       'build_date', raise_on_not_found=True)
-  debian_cloud_images_version = '732707480b4c6a5174066a9d4d5a7b0c05ab0fb1'
+  debian_cloud_images_version = '5343a8ab508232554b170972c5c66da0d5e628b7'
   debian_version = utils.GetMetadataAttribute(
       'debian_version', raise_on_not_found=True)
   outs_path = utils.GetMetadataAttribute('daisy-outs-path',
@@ -96,7 +96,6 @@ def main():
   os.chmod(config_space + 'scripts/BOOKWORM/10-clean', 0o755)
   os.chmod(config_space + 'scripts/GCE_CLEAN/10-gce-clean', 0o755)
   os.chmod(config_space + 'scripts/GCE_SPECIFIC/12-sshd', 0o755)
-  os.chmod(config_space + 'hooks/repository.BUSTER', 0o755)
   os.chmod(config_space + 'hooks/repository.GCE_SPECIFIC', 0o755)
   os.chmod(config_space + 'hooks/configure.GCE_SPECIFIC', 0o755)
 
